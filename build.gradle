@@ -1,0 +1,34 @@
+plugins {
+    id 'application'
+}
+
+group = 'blarknes'
+version = '0.1.0'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Tests
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.5'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+application {
+    mainClass = 'boombox.Application'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
