@@ -28,7 +28,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'boombox.Application'
+    mainClass = 'boombox.Boombox'
 }
 
 javafx {
