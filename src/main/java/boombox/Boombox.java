@@ -27,6 +27,7 @@ public class Boombox extends Application {
     }
 
     private void render(final Stage stage) {
+        stage.setTitle("Boombox");
         stage.show();
     }
 
